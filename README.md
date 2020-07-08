@@ -1,10 +1,10 @@
 # snpgen
 
-A Simple Node Project Generator based on my [node-webapp-template](https://github.com/f0lg0/node-webapp-template) for beginners.
+A Simple Node Project Generator based on my [node-webapp-template-1](https://github.com/f0lg0/node-webapp-template-1) and [node-webapp-template-2](https://github.com/f0lg0/node-webapp-template-2) for beginners.
 
 ## Description
 
-This is an offline project generator that let's you create NodeJS projects by simply running a command. This is useful especially when you don't have the possibility to clone my [template](https://github.com/f0lg0/node-webapp-template). It is also **customizable** so you can build your own template and generate your own project.
+This is an offline project generator that let's you create NodeJS projects by simply running a command. This is useful especially when you don't have the possibility to clone my templates. It is also **customizable** so you can build your own template and generate your own project.
 
 ### Note
 
@@ -129,9 +129,3 @@ npm run snpgen
 ### Note
 
 The files are one-line pieces of code, you may want to beautify them.
-
-
-
-## Coming soon
-
-New template from [HERE](https://github.com/f0lg0/node-webapp-template-2)
