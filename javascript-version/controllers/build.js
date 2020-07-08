@@ -1,34 +1,38 @@
 const fs = require('fs');
 
 exports.projectFolder = (projectName) => {
+  if (!fs.existsSync(projectName)) {
     fs.mkdirSync(projectName);
+  } else {
+    throw new Error(`[!] Folder '${projectName}' already exists in this folder!`)
+  }
 };
 
 exports.coreFiles = (entryPoint) => {
-    const entries = Object.entries(entryPoint);
+  const entries = Object.entries(entryPoint);
 
-    for (const [file, content] of entries) {
-      fs.writeFileSync(file, content, 'utf-8');
-    }
+  for (const [file, content] of entries) {
+    fs.writeFileSync(file, content, 'utf-8');
+  }
 };
 
 exports.folderStructure = (folders) => {
-    const entries = Object.entries(folders);
+  const entries = Object.entries(folders);
 
-    for (const [folder, subfolders] of entries) {
-      fs.mkdirSync(folder);
-      if (subfolders) {
-        for (const subfolder of subfolders) {
-          fs.mkdirSync(`${folder}/${subfolder}`);
-        }
+  for (const [folder, subfolders] of entries) {
+    fs.mkdirSync(folder);
+    if (subfolders) {
+      for (const subfolder of subfolders) {
+        fs.mkdirSync(`${folder}/${subfolder}`);
       }
     }
+  }
 };
 
 exports.populateWithReadmes = (readmes) => {
-    const entries = Object.entries(readmes);
+  const entries = Object.entries(readmes);
 
-    for (const [folder, readme] of entries) {
-      fs.writeFileSync(`${folder}/readme.md`, readme, 'utf-8');
-    }
+  for (const [folder, readme] of entries) {
+    fs.writeFileSync(`${folder}/readme.md`, readme, 'utf-8');
+  }
 }

@@ -62,7 +62,15 @@ inquirer.prompt(QUESTIONS)
 
     // creating project directory
     console.log("[BUILD] Project folder");
-    build.projectFolder(name)
+
+    try {
+      build.projectFolder(name)
+    } catch(e) {
+      console.log(e);
+      console.log("[ABORT] Failure, project not created.")
+      process.exit(1);
+    }
+
     console.log("[*] Done");
 
     // cd in newly created project folder
@@ -100,5 +108,6 @@ inquirer.prompt(QUESTIONS)
     console.log("[GENERATE] Sample app...");
     generate.app(data.appFiles);
     console.log("[*] Done");
-    
+
+    console.log("[SUCCESS] Project created!");
 });
