@@ -12,7 +12,7 @@ This tool is more of a utility I needed, it is **NOT** professional or really we
 
 ### How it works 
 
-spngen is really simple: it grabs a project structure from the templates folder (in the Python version it grabs it from template.py) which is a JSON file with all the project details and proceeds to install the newly grabbed payload by iterating thru it. Obviously the contents are hard-coded inside the template file but that's because this is an offline generator. The templates **must** follow this schema:
+spngen is really simple: it grabs a project structure from the templates folder (in the Python version it grabs it from template.py) which is a JSON file with all the project details and proceeds to install the newly grabbed payload by iterating thru it. Obviously the contents are hard-coded inside the template file but that's because this is an offline generator. The templates **must** follow this schema **(obviously you can change files and folder names)**:
 
 ```json
 {
