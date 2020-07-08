@@ -129,3 +129,9 @@ npm run snpgen
 ### Note
 
 The files are one-line pieces of code, you may want to beautify them.
+
+
+
+## Coming soon
+
+New template from [HERE](https://github.com/f0lg0/node-webapp-template-2)
