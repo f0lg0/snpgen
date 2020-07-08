@@ -35,3 +35,15 @@ The files are one-line pieces of code, you may want to beautify them.
 ## Coming soon
 
 - [ ] Project Generator written in Javascript (NodeJS)
+
+
+
+#### Progress
+
+- [x] create project folder
+- [x] create new package.json
+- [ ] init project with package.json
+- [x] create core files (server.js etc.)
+- [x] build folder structure 
+- [x] populate with readmes
+- [ ] generate the app itself (all the files)
