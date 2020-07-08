@@ -42,7 +42,7 @@ The files are one-line pieces of code, you may want to beautify them.
 
 - [x] create project folder
 - [x] create new package.json
-- [ ] init project with package.json
+- [x] init project with package.json
 - [x] create core files (server.js etc.)
 - [x] build folder structure 
 - [x] populate with readmes
