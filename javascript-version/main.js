@@ -19,6 +19,10 @@ const QUESTIONS = [
   {
     name: 'name',
     type: 'input',
+    validate: function (input) {
+      if (/^([A-Za-z\-\_\d])+$/.test(input)) return true;
+      else return 'Project name cannot be empty and may only include letters, numbers, underscores and hashes.';
+    },
     message: 'Project name:'
   },
 
