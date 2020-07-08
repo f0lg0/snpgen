@@ -3,6 +3,7 @@ const inquirer = require('inquirer');
 
 const init = require('./controllers/init');
 const build = require('./controllers/build');
+const generate = require('./controllers/generate');
 
 const CHOICES = fs.readdirSync('./templates');
 
@@ -11,7 +12,7 @@ const QUESTIONS = [
     name: 'template',
     type: 'list',
     message: 'What project template would you like to generate? (simple-node-webapp)',
-    default: 'simple-node-webapp.json',
+    default: 'simple-node-webapp-1.json',
     choices: CHOICES
   },
 
@@ -95,4 +96,9 @@ inquirer.prompt(QUESTIONS)
     build.populateWithReadmes(data.readmes);
     console.log("[*] Done");
 
+    // populating with readmes
+    console.log("[GENERATE] Sample app...");
+    generate.app(data.appFiles);
+    console.log("[*] Done");
+    
 });
