@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 
 const init = require('./controllers/init');
-const build = require('./controllers/build.structure');
+const build = require('./controllers/build');
 
 const CHOICES = fs.readdirSync('./templates');
 
