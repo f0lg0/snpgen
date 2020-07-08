@@ -1,3 +1,4 @@
+const fs = require('fs');
 const inquirer = require('inquirer');
 
 const init = require('./controllers/init');
@@ -72,6 +73,11 @@ inquirer.prompt(QUESTIONS)
     // creating packagejson
     console.log("[INIT] package.json");
     init.createPackageJSON(packagejson);
+    console.log("[*] Done");
+
+    // installing dependencies
+    console.log("[INIT] Dependencies from package.json");
+    init.npmInstall();
     console.log("[*] Done");
 
     // creating core files
