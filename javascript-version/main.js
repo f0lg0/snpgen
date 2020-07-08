@@ -11,8 +11,8 @@ const QUESTIONS = [
   {
     name: 'template',
     type: 'list',
-    message: 'What project template would you like to generate? (simple-node-webapp)',
-    default: 'simple-node-webapp-1.json',
+    message: 'What project template would you like to generate?',
+    default: 'simple-node-webapp-techrole.json (structure by technical role',
     choices: CHOICES
   },
 
