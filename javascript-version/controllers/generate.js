@@ -1,4 +1,5 @@
 const fs = require('fs');
+const child_process = require('child_process');
 
 exports.app = (filesTree) => {
     const entries = Object.entries(filesTree);
@@ -9,4 +10,10 @@ exports.app = (filesTree) => {
             fs.writeFileSync(`${folder}/${file}`, content, 'utf-8');
         }
     }
+};
+
+exports.vueApp = () => {
+    child_process.execSync('vue create client', {
+        stdio: [0, 1, 2]
+    });
 };

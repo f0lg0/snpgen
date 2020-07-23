@@ -7,8 +7,7 @@ const generate = require('./controllers/generate');
 
 const CHOICES = fs.readdirSync('./templates');
 
-const QUESTIONS = [
-  {
+const QUESTIONS = [{
     name: 'template',
     type: 'list',
     message: 'What project template would you like to generate?',
@@ -53,6 +52,7 @@ const QUESTIONS = [
   }
 ];
 
+
 inquirer.prompt(QUESTIONS)
   .then(answers => {
     const template = answers['template'];
@@ -69,7 +69,7 @@ inquirer.prompt(QUESTIONS)
 
     try {
       build.projectFolder(name)
-    } catch(e) {
+    } catch (e) {
       console.log(e);
       console.log("[ABORT] Failure, project not created.")
       process.exit(1);
@@ -113,5 +113,9 @@ inquirer.prompt(QUESTIONS)
     generate.app(data.appFiles);
     console.log("[*] Done");
 
+    if (/vue/.test(template)) {
+      generate.vueApp();
+    }
+
     console.log("[SUCCESS] Project created!");
-});
+  });
